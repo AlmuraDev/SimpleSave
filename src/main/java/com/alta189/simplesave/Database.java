@@ -101,6 +101,8 @@ public abstract class Database {
 	public void save(Object o) {
 		save(o.getClass(), o);
 	}
+	
+	public abstract void directSqlCommand(String myCommand);
 
 	public abstract void remove(Class<?> tableClass, Object o);
 

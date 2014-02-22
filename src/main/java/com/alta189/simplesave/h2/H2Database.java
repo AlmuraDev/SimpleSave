@@ -555,4 +555,9 @@ public class H2Database extends Database {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void directSqlCommand(String myCommand) {
+		// TODO
+	}
 }

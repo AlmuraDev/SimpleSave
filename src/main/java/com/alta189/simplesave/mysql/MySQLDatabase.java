@@ -534,6 +534,17 @@ public class MySQLDatabase extends Database {
 		}
 	}
 
+	@Override
+	public void directSqlCommand(String myStatement) {
+		PreparedStatement statement;
+		try {
+			statement = conn.prepareStatement(myStatement);
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public void checkTableStructure(TableRegistration table) {
 		// TODO Update table structure
 		StringBuilder query = new StringBuilder();

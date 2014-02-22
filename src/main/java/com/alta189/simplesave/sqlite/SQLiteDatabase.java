@@ -508,4 +508,9 @@ public class SQLiteDatabase extends Database {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void directSqlCommand(String myCommand) {
+		// TODO
+	}
 }
